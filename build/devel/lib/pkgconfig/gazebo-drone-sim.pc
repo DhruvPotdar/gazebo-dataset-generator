@@ -1,0 +1,8 @@
+prefix=/home/dhruv/catkin_ws/src/gazebo-drone-sim/build/devel
+
+Name: gazebo-drone-sim
+Description: Description of gazebo-drone-sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
