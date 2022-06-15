@@ -1,5 +1,7 @@
 <sdf version='1.7'>
+  
   <world name='default'>
+    
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
@@ -18,20 +20,27 @@
         <falloff>0</falloff>
       </spot>
     </light>
-    <gravity>0 0 -9.8</gravity>
+    
+    <gravity>0 0 -4</gravity>
+    
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    
     <atmosphere type='adiabatic'/>
+    
     <physics type='ode'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
+    
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
     </scene>
+    
     <wind/>
+    
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <latitude_deg>0</latitude_deg>
@@ -39,6 +48,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
+    
     <model name='iris_demo'>
       <frame name='iris::__model__' attached_to='iris::base_link'>
         <pose relative_to='__model__'>0 0 0.194923 0 -0 0</pose>
@@ -1003,6 +1013,7 @@
       </plugin>
       <pose>0.462592 -0.476031 0 0 -0 0</pose>
     </model>
+    
     <model name='heightmap'>
       <static>1</static>
       <link name='link'>
@@ -1075,11 +1086,22 @@
       </link>
       <pose>0.155719 -0.043501 0 0 -0 0</pose>
     </model>
+    
     <state world_name='default'>
       <sim_time>28 861000000</sim_time>
-      <real_time>15 504904146</real_time>
-      <wall_time>1655195120 327584380</wall_time>
-      <iterations>3553</iterations>
+      <real_time>0 0</real_time>
+      <wall_time>1655230893 554500949</wall_time>
+      <iterations>0</iterations>
+      <model name='camera'>
+        <pose>7.25334 -64.3703 10 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>7.25334 -64.3703 10 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='heightmap'>
         <pose>0.155719 -0.043501 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -1091,10 +1113,10 @@
         </link>
       </model>
       <model name='helipad'>
-        <pose>6.44468 -64.7271 -1.57881 -1.68281 -1.55574 -3.02958</pose>
+        <pose>3.93646 -62.592 -1.64841 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>6.44468 -64.7271 -1.57881 -1.68281 -1.55574 -3.02958</pose>
+          <pose>3.93646 -62.592 -1.64841 3.14159 -1.56696 3.14159</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1106,56 +1128,56 @@
         <link name='gimbal_small_2d::base_link'>
           <pose>-8.9528 -57.3197 7.23104 1.56875 -0.004621 1.58717</pose>
           <velocity>0.000345 -0.000413 -3.3e-05 0.005835 0.004934 -0.000594</velocity>
-          <acceleration>0 0 0 -0 -0 -9e-06</acceleration>
+          <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='gimbal_small_2d::tilt_link'>
           <pose>-8.93285 -57.3195 7.25108 3.13955 -0.004621 1.58717</pose>
           <velocity>0.000443 -0.000542 -0.00013 0.005835 0.004924 -0.000594</velocity>
-          <acceleration>-4e-06 -0 0 -2e-05 0.000196 -8e-06</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='iris::base_link'>
           <pose>-8.95312 -57.3103 7.356 0.004623 -0.001251 0.017162</pose>
           <velocity>0.00096 -0.001142 2.3e-05 0.005834 0.004931 2.5e-05</velocity>
-          <acceleration>0 0 -0 0 0 -1.2e-05</acceleration>
-          <wrench>0 0 -0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 0 -1.2e-05</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='iris::iris/ground_truth/odometry_sensorgt_link'>
           <pose>-8.95312 -57.3103 7.356 0.00462 -0.00125 0.017163</pose>
           <velocity>0.00096 -0.001142 2.3e-05 0.005834 0.004928 0.000644</velocity>
-          <acceleration>0 0 -0 -0 2e-06 -2.1e-05</acceleration>
-          <wrench>0 0 -0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 2e-06 -1.4e-05</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='iris::iris/imu_link'>
           <pose>-8.95312 -57.3103 7.356 0.00462 -0.00125 0.017163</pose>
           <velocity>0.00096 -0.001142 2.3e-05 0.005834 0.004928 0.000644</velocity>
-          <acceleration>0 0 -0 -4.1e-05 1e-06 -0.000804</acceleration>
-          <wrench>0 0 -0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 2e-06 -1.4e-05</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='iris::rotor_0'>
           <pose>-8.81939 -57.5281 7.37815 -0.002754 -0.003915 1.93685</pose>
           <velocity>0.001075 -0.001268 -0.001907 0.005834 0.004931 3.1e-05</velocity>
-          <acceleration>-0 0 -0 0 -0 1.7e-05</acceleration>
-          <wrench>-0 0 -0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 1.7e-05</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='iris::rotor_1'>
           <pose>-9.08656 -57.1126 7.37976 -0.002866 -0.003834 1.9657</pose>
           <velocity>0.001073 -0.001284 0.001834 0.005834 0.004931 3.3e-05</velocity>
-          <acceleration>-0 -0 -0 0 -0 1.6e-05</acceleration>
-          <wrench>-0 -0 -0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 1.6e-05</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='iris::rotor_2'>
           <pose>-8.82694 -57.0882 7.38018 -0.000645 0.004743 -1.95308</pose>
           <velocity>0.001074 -0.00128 0.000697 0.005834 0.004931 3.6e-05</velocity>
-          <acceleration>0 -0 -0 0 -0 2.3e-05</acceleration>
-          <wrench>0 -0 -0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 2.3e-05</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='iris::rotor_3'>
           <pose>-9.07969 -57.5126 7.37792 -0.000488 0.004762 -1.91993</pose>
           <velocity>0.001074 -0.001273 -0.000533 0.005834 0.004931 3.1e-05</velocity>
-          <acceleration>-0 -0 0 0 -0 2.4e-05</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 2.4e-05</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree'>
@@ -1322,53 +1344,15 @@
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
+    
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>1.20782 -71.8917 21.3466 0 1.39112 0.753059</pose>
+        <pose>40.9121 -81.2337 50.2617 0 0.774585 2.26324</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
-    <model name='helipad'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <pose>0 0 0 3.14159 -1.57079 3.14159</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>model://helipad/meshes/untitled.obj</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <pose>0 0 0 0 0 -1.5708</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>model://helipad/meshes/untitled.obj</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>-16.1411 58.2942 0 0 -0 0</pose>
-    </model>
+    
     <model name='oak_tree'>
       <static>1</static>
       <link name='link'>
@@ -1432,6 +1416,7 @@
       </link>
       <pose>11.1289 -69.1788 0 0 -0 0</pose>
     </model>
+    
     <model name='oak_tree_clone'>
       <static>1</static>
       <link name='link'>
@@ -1495,6 +1480,7 @@
       </link>
       <pose>6.78791 -73.1492 -1.62513 0 -0 0</pose>
     </model>
+    
     <model name='oak_tree_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -1558,6 +1544,7 @@
       </link>
       <pose>1.77296 -57.332 -1.62513 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree'>
       <static>1</static>
       <link name='link'>
@@ -1621,6 +1608,7 @@
       </link>
       <pose>-2.98113 -63.8341 0 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone'>
       <static>1</static>
       <link name='link'>
@@ -1684,6 +1672,7 @@
       </link>
       <pose>0.83651 -64.9263 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -1747,6 +1736,7 @@
       </link>
       <pose>3.09998 -70.3585 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -1810,6 +1800,7 @@
       </link>
       <pose>-0.497782 -70 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_2'>
       <static>1</static>
       <link name='link'>
@@ -1873,6 +1864,7 @@
       </link>
       <pose>12.0868 -64.4406 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_3'>
       <static>1</static>
       <link name='link'>
@@ -1936,6 +1928,7 @@
       </link>
       <pose>10.6545 -61.5633 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_4'>
       <static>1</static>
       <link name='link'>
@@ -1999,6 +1992,7 @@
       </link>
       <pose>10.4931 -65.1228 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_5'>
       <static>1</static>
       <link name='link'>
@@ -2062,6 +2056,7 @@
       </link>
       <pose>-0.812989 -67.9809 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='oak_tree_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -2125,6 +2120,7 @@
       </link>
       <pose>-0.976993 -69.4809 -1.62513 0 -0 0</pose>
     </model>
+    
     <model name='oak_tree_clone_2'>
       <static>1</static>
       <link name='link'>
@@ -2188,6 +2184,7 @@
       </link>
       <pose>12.4163 -69.7864 -1.62513 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_clone'>
       <static>1</static>
       <link name='link'>
@@ -2251,6 +2248,7 @@
       </link>
       <pose>-3.8561 -65.4949 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -2314,6 +2312,7 @@
       </link>
       <pose>-2.09942 -66.9121 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -2377,23 +2376,123 @@
       </link>
       <pose>-4.5187 -67.6132 -1.72716 0 -0 0</pose>
     </model>
-    <sensor name='my_camera' type='camera'>
-      <camera>
-        <save enabled='1'>
-          <path>/tmp/camera_save_tutorial</path>
-        </save>
-        <horizontal_fov>1.047</horizontal_fov>
-        <image>
-          <width>1920</width>
-          <height>1080</height>
-        </image>
-        <clip>
-          <near>0.1</near>
-          <far>100</far>
-        </clip>
-      </camera>
-      <always_on>1</always_on>
-      <update_rate>30</update_rate>
-    </sensor>
+    
+    <model name='helipad'>
+      <link name='link'>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <pose>0 0 0 3.14159 -1.56696 3.14159</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://helipad/meshes/maybe.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/dhruv/.gazebo/models/helipad/meshes/maybe.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose>4.24466 -64.1198 0 0 -0 0</pose>
+    </model>
+    
+    <model name='camera'>
+      <static>false</static>
+      <pose>-1 0 2 0 1 0</pose>
+      <link name='link'>
+        
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </visual>
+        
+        <sensor name='my_camera' type='camera'>
+          <camera>
+            <save enabled="true">
+              <path>/tmp/camera_save_tutorial</path>
+            </save>
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+              <width>1920</width>
+              <height>1080</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+        </sensor>
+      
+      </link>
+    </model>
+
   </world>
 </sdf>
