@@ -1,7 +1,5 @@
 <sdf version='1.7'>
-  
   <world name='default'>
-    
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
@@ -20,27 +18,20 @@
         <falloff>0</falloff>
       </spot>
     </light>
-    
-    <gravity>0 0 -4</gravity>
-    
+    <gravity>0 0 -1</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    
     <atmosphere type='adiabatic'/>
-    
     <physics type='ode'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
-    
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
     </scene>
-    
     <wind/>
-    
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <latitude_deg>0</latitude_deg>
@@ -48,7 +39,6 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    
     <model name='iris_demo'>
       <frame name='iris::__model__' attached_to='iris::base_link'>
         <pose relative_to='__model__'>0 0 0.194923 0 -0 0</pose>
@@ -1013,7 +1003,6 @@
       </plugin>
       <pose>0.462592 -0.476031 0 0 -0 0</pose>
     </model>
-    
     <model name='heightmap'>
       <static>1</static>
       <link name='link'>
@@ -1086,17 +1075,16 @@
       </link>
       <pose>0.155719 -0.043501 0 0 -0 0</pose>
     </model>
-    
     <state world_name='default'>
       <sim_time>28 861000000</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1655230893 554500949</wall_time>
+      <wall_time>1655368406 648773706</wall_time>
       <iterations>0</iterations>
       <model name='camera'>
-        <pose>7.25334 -64.3703 10 0 -0 0</pose>
+        <pose>27.6661 -63.2428 19.8258 3.14159 0.548241 3.14159</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>7.25334 -64.3703 10 0 -0 0</pose>
+          <pose>27.6661 -63.2428 19.8258 3.14159 0.548241 3.14159</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1181,10 +1169,10 @@
         </link>
       </model>
       <model name='oak_tree'>
-        <pose>8.28884 -58.0172 -1.62513 0 -0 0</pose>
+        <pose>13.3384 -52.8739 0.420877 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>8.28884 -58.0172 -1.62513 0 -0 0</pose>
+          <pose>13.3384 -52.8739 0.420877 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1211,10 +1199,10 @@
         </link>
       </model>
       <model name='oak_tree_clone_1'>
-        <pose>-0.976993 -69.4809 -1.62513 0 -0 0</pose>
+        <pose>-1.36539 -68.0428 -1.62513 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-0.976993 -69.4809 -1.62513 0 -0 0</pose>
+          <pose>-1.36539 -68.0428 -1.62513 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1271,30 +1259,30 @@
         </link>
       </model>
       <model name='pine_tree_clone_2'>
-        <pose>12.0868 -64.4406 -1.72716 0 -0 0</pose>
+        <pose>4.50778 -71.1956 -1.72716 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>12.0868 -64.4406 -1.72716 0 -0 0</pose>
+          <pose>4.50778 -71.1956 -1.72716 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='pine_tree_clone_3'>
-        <pose>10.6545 -61.5633 -1.72716 0 -0 0</pose>
+        <pose>16.6008 -77.9787 -1.72716 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>10.6545 -61.5633 -1.72716 0 -0 0</pose>
+          <pose>16.6008 -77.9787 -1.72716 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='pine_tree_clone_4'>
-        <pose>10.4931 -65.1228 -1.72716 0 -0 0</pose>
+        <pose>1.89974 -70.5535 -1.72716 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>10.4931 -65.1228 -1.72716 0 -0 0</pose>
+          <pose>1.89974 -70.5535 -1.72716 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1340,19 +1328,27 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <model name='unit_box'>
+        <pose>9.87765 -63.5864 0.5 0 -0.451931 0</pose>
+        <scale>46.6848 8.08898 1</scale>
+        <link name='link'>
+          <pose>9.87765 -63.5864 0.5 0 -0.451931 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <light name='sun'>
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>40.9121 -81.2337 50.2617 0 0.774585 2.26324</pose>
+        <pose>21.5469 -16.3087 20.6159 0 0 -1.5708</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
-    
     <model name='oak_tree'>
       <static>1</static>
       <link name='link'>
@@ -1416,7 +1412,6 @@
       </link>
       <pose>11.1289 -69.1788 0 0 -0 0</pose>
     </model>
-    
     <model name='oak_tree_clone'>
       <static>1</static>
       <link name='link'>
@@ -1480,7 +1475,6 @@
       </link>
       <pose>6.78791 -73.1492 -1.62513 0 -0 0</pose>
     </model>
-    
     <model name='oak_tree_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -1544,7 +1538,6 @@
       </link>
       <pose>1.77296 -57.332 -1.62513 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree'>
       <static>1</static>
       <link name='link'>
@@ -1608,7 +1601,6 @@
       </link>
       <pose>-2.98113 -63.8341 0 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone'>
       <static>1</static>
       <link name='link'>
@@ -1672,7 +1664,6 @@
       </link>
       <pose>0.83651 -64.9263 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -1736,7 +1727,6 @@
       </link>
       <pose>3.09998 -70.3585 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -1800,7 +1790,6 @@
       </link>
       <pose>-0.497782 -70 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_2'>
       <static>1</static>
       <link name='link'>
@@ -1864,7 +1853,6 @@
       </link>
       <pose>12.0868 -64.4406 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_3'>
       <static>1</static>
       <link name='link'>
@@ -1928,7 +1916,6 @@
       </link>
       <pose>10.6545 -61.5633 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_4'>
       <static>1</static>
       <link name='link'>
@@ -1992,7 +1979,6 @@
       </link>
       <pose>10.4931 -65.1228 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_5'>
       <static>1</static>
       <link name='link'>
@@ -2056,7 +2042,6 @@
       </link>
       <pose>-0.812989 -67.9809 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='oak_tree_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -2120,7 +2105,6 @@
       </link>
       <pose>-0.976993 -69.4809 -1.62513 0 -0 0</pose>
     </model>
-    
     <model name='oak_tree_clone_2'>
       <static>1</static>
       <link name='link'>
@@ -2184,7 +2168,6 @@
       </link>
       <pose>12.4163 -69.7864 -1.62513 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_clone'>
       <static>1</static>
       <link name='link'>
@@ -2248,7 +2231,6 @@
       </link>
       <pose>-3.8561 -65.4949 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -2312,7 +2294,6 @@
       </link>
       <pose>-2.09942 -66.9121 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='pine_tree_clone_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -2376,7 +2357,6 @@
       </link>
       <pose>-4.5187 -67.6132 -1.72716 0 -0 0</pose>
     </model>
-    
     <model name='helipad'>
       <link name='link'>
         <self_collide>0</self_collide>
@@ -2458,23 +2438,43 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>4.24466 -64.1198 0 0 -0 0</pose>
     </model>
-    
     <model name='camera'>
-      <static>false</static>
+      <static>0</static>
       <pose>-1 0 2 0 1 0</pose>
       <link name='link'>
-        
         <visual name='visual'>
           <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
+            <sphere>
+              <radius>1</radius>
+            </sphere>
           </geometry>
         </visual>
-        
+        <collision name='collision'>
+          <geometry>
+            <sphere>
+              <radius>1</radius>
+            </sphere>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
         <sensor name='my_camera' type='camera'>
           <camera>
-            <save enabled="true">
+            <save enabled='1'>
               <path>/tmp/camera_save_tutorial</path>
             </save>
             <horizontal_fov>1.047</horizontal_fov>
@@ -2490,9 +2490,79 @@
           <always_on>1</always_on>
           <update_rate>30</update_rate>
         </sensor>
-      
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
     </model>
-
+    <model name='unit_box'>
+      <static>1</static>
+      <pose>23.0052 -72.4973 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
   </world>
 </sdf>
