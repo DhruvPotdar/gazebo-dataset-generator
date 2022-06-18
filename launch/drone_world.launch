@@ -5,19 +5,3 @@
   </include>
 
 </launch>
-
-
-<!-- 
-<visual name='visual'>
-  <geometry>
-    <box>
-      <size>1 1 1</size>
-    </box>
-  </geometry>
-  <material>
-    <script>
-      <name>Gazebo/Grey</name>
-      <uri>file://media/materials/scripts/gazebo.material</uri>
-    </script>
-  </material>
-</visual> -->
