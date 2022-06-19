@@ -30,6 +30,15 @@
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
+<!-- 
+      <fog>
+        <color>0.1 0.2 0.3 1.0</color> Change color to white
+        <type>linear</type>
+        <density>0.1</density>
+        <start>10</start>
+        <end>40</end>
+      </fog> -->
+
     </scene>
     <wind/>
     <spherical_coordinates>
@@ -1666,6 +1675,7 @@
       </link>
       <pose>0.83651 -64.9263 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -1729,6 +1739,7 @@
       </link>
       <pose>3.09998 -70.3585 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -1792,6 +1803,7 @@
       </link>
       <pose>-0.497782 -70 -1.72716 0 -0 0</pose>
     </model>
+   
     <model name='pine_tree_clone_2'>
       <static>1</static>
       <link name='link'>
@@ -1855,6 +1867,7 @@
       </link>
       <pose>12.0868 -64.4406 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_3'>
       <static>1</static>
       <link name='link'>
@@ -1918,6 +1931,7 @@
       </link>
       <pose>10.6545 -61.5633 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_4'>
       <static>1</static>
       <link name='link'>
@@ -1981,6 +1995,7 @@
       </link>
       <pose>10.4931 -65.1228 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_5'>
       <static>1</static>
       <link name='link'>
@@ -2044,6 +2059,7 @@
       </link>
       <pose>-0.812989 -67.9809 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='oak_tree_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -2107,6 +2123,7 @@
       </link>
       <pose>-0.976993 -69.4809 -1.62513 0 -0 0</pose>
     </model>
+    
     <model name='oak_tree_clone_2'>
       <static>1</static>
       <link name='link'>
@@ -2170,6 +2187,7 @@
       </link>
       <pose>12.4163 -69.7864 -1.62513 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_clone'>
       <static>1</static>
       <link name='link'>
@@ -2233,6 +2251,7 @@
       </link>
       <pose>-3.8561 -65.4949 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_clone_0'>
       <static>1</static>
       <link name='link'>
@@ -2296,6 +2315,7 @@
       </link>
       <pose>-2.09942 -66.9121 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='pine_tree_clone_clone_1'>
       <static>1</static>
       <link name='link'>
@@ -2359,6 +2379,7 @@
       </link>
       <pose>-4.5187 -67.6132 -1.72716 0 -0 0</pose>
     </model>
+    
     <model name='helipad'>
       <link name='link'>
         <self_collide>0</self_collide>
@@ -2440,6 +2461,7 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>4.24466 -64.1198 0 0 -0 0</pose>
     </model>
+    
     <model name='camera'>
       <static>0</static>
       <pose>-1 0 2 0 1 0</pose>
@@ -2509,6 +2531,7 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+    
     <model name='unit_box'>
       <link name='link'>
         <inertial>

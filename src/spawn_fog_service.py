@@ -21,16 +21,16 @@ light_name = 'sun'
 cast_shadows = True
 
 difuse = ColorRGBA()
-difuse.r = float(204/255)
-difuse.g = float(204/255)
-difuse.b = float(204/255)
-difuse.a = float(255/255)
+difuse.r = float(0/255)
+difuse.g = float(0/255)
+difuse.b = float(0/255)
+difuse.a = float(0/255)
 
 specular = ColorRGBA()
-specular.r = float(51/255)
-specular.g = float(51/255)
-specular.b = float(51/255)
-specular.a = float(255/255)
+specular.r = float(0/255)
+specular.g = float(0/255)
+specular.b = float(0/255)
+specular.a = float(0/255)
 
 attenuation_constant = 1.0
 attenuation_linear = 1.0
