@@ -30,9 +30,9 @@
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
-<!-- 
-      <fog>
-        <color>0.1 0.2 0.3 1.0</color> Change color to white
+
+      <!-- <fog>
+        <color>0.9 0.9 0.9 1.0</color> 
         <type>linear</type>
         <density>0.1</density>
         <start>10</start>
@@ -2496,7 +2496,8 @@
             <bounce/>
           </surface>
         </collision>
-        <sensor name='my_camera' type='camera'>
+       
+        <!-- <sensor name='my_camera' type='camera'>
           <camera>
             <save enabled='1'>
               <path>/tmp/camera_save_tutorial</path>
@@ -2511,10 +2512,14 @@
               <far>100</far>
             </clip>
           </camera>
+          
           <always_on>1</always_on>
           <update_rate>30</update_rate>
         </sensor>
-        <self_collide>0</self_collide>
+         -->
+        
+        
+         <self_collide>0</self_collide>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <inertia>
