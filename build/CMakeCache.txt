@@ -297,7 +297,7 @@ DOXYGEN_FOUND:BOOL=TRUE
 EMPY_EXECUTABLE:FILEPATH=EMPY_EXECUTABLE-NOTFOUND
 
 //Empy script
-EMPY_SCRIPT:STRING=/home/dhruv/.local/lib/python3.8/site-packages/em.py
+EMPY_SCRIPT:STRING=/usr/lib/python3/dist-packages/em.py
 
 //The directory containing a CMake configuration file for GMock.
 GMock_DIR:PATH=GMock_DIR-NOTFOUND
@@ -337,7 +337,7 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 PYTHON_VERSION:STRING=3
 
 //Location of Python module em
-PY_EM:STRING=/home/dhruv/.local/lib/python3.8/site-packages/em.py
+PY_EM:STRING=/usr/lib/python3/dist-packages/em.py
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
@@ -611,7 +611,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PY_em
-FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/home/dhruv/.local/lib/python3.8/site-packages/em.py][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/usr/lib/python3/dist-packages/em.py][v()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.10()]
 //Details about finding Threads

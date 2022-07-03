@@ -1,7 +1,7 @@
 <launch>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-  <arg name="world_name" value="$(find gazebo-drone-sim)/world/hills.world"/>
+  <arg name="world_name" value="$(find gazebo-drone-sim)/world/dataset_collection.world"/>
   </include>
 
 </launch>
