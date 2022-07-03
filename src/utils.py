@@ -39,8 +39,8 @@ def get_camera_rpy(x, y, z):
   # x = x * 0.9
   # y = y * 0.9
   # z = z * 1.25
-  origin_x_offset = 3.0 + 194
-  origin_y_offset = 3.0 + 56
+  origin_x_offset = 3.0
+  origin_y_offset = 3.0
   sign_x = 0.0
   sign_y = 0.0
 

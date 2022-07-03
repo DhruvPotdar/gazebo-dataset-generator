@@ -20,6 +20,11 @@ GAZEBO_SET_MODEL_STATE_TOPIC = '/gazebo/set_model_state'
 GAZEBO_CAMERA_MODEL_NAME = 'camera'
 GAZEBO_REFERENCE_FRAME = 'world'
 
+# Define origin of the center of the target object
+TARGET_OBJECT_X = 0.0
+TARGET_OBJECT_Y = 0.0
+TARGET_OBJECT_Z = 0.0
+
 rospy.init_node('camera_state_publisher')
 rate = rospy.Rate(0.1)
 
@@ -56,9 +61,9 @@ if __name__ == '__main__':
 
     for alt in altitudes:
         for theta in angles:
-            x = alt * tan(theta)
-            y = x
-            z = alt
+            x = alt * tan(theta) + TARGET_OBJECT_X
+            y = x + TARGET_OBJECT_Y
+            z = alt + TARGET_OBJECT_Z
             ms.pose.position.x = x
             ms.pose.position.y = y
             ms.pose.position.z = z
