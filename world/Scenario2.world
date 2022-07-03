@@ -232,8 +232,85 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>-206.825 -100.925 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
     </model>
+    
+    <model name='camera'>
+      <static>0</static>
+      <pose>-1 0 2 0 1 0</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <sphere>
+              <radius>1</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <sphere>
+              <radius>1</radius>
+            </sphere>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+       
+        <sensor name='my_camera' type='camera'>
+          <camera>
+            <save enabled='1'>
+              <path>/home/dhruv/catkin_ws/src/gazebo-drone-sim/images/scenario_2</path>
+            </save>
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+              <width>1920</width>
+              <height>1080</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </camera>
+
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+
+        </sensor>
+        
+        
+        
+         <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
     <state world_name='default'>
       <sim_time>354 705000000</sim_time>
       <real_time>368 884574974</real_time>
