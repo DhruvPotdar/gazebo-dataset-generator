@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import numpy as np
-from math import radians, sin, cos, atan2, sqrt, pi as PI, degrees
+from math import radians, sin, cos, atan2, sqrt, tan, pi as PI, degrees
 from geometry_msgs.msg import Quaternion
 
 def get_quaternion_from_euler(roll, pitch, yaw):
@@ -39,8 +39,8 @@ def get_camera_rpy(x, y, z):
   # x = x * 0.9
   # y = y * 0.9
   # z = z * 1.25
-  origin_x_offset = 3.0
-  origin_y_offset = 3.0
+  origin_x_offset = 3.0 + np.random.rand()
+  origin_y_offset = 3.0 + np.random.rand()
   sign_x = 0.0
   sign_y = 0.0
 
@@ -62,7 +62,7 @@ def get_camera_rpy(x, y, z):
   y += sign_y * origin_y_offset
 
   roll = 0.0
-  pitch = (PI/2 - atan2(z, sqrt(x**2 + y**2)))
+  pitch = (atan2(z, sqrt(x**2 + y**2)))
   yaw = (atan2(y, x) - PI)
   return [roll, pitch, yaw]
 
@@ -87,13 +87,34 @@ def input_mode():
       print("RPY in degrees: ", (degrees(rpy[0]), degrees(rpy[1]), degrees(rpy[2])))
       # print(90 - atan2(z, sqrt(x**2 + y**2)) * PI / 180)
 
+def alt_input():
+  running = True
+  while running:
+    input_alt = float(input("Altitude: "))
+    input_angle = float(input("Angle: "))
+    base_yaw = float(input("Base yaw: "))
+    
+    r = input_alt * tan(radians(input_angle))
+    x = r * cos(radians(base_yaw))
+    y = r * sin(radians(base_yaw))
+    z = input_alt
+    print("x: ", x, "y: ", y, "z: ", z)
+    command = input("Exit? [y/n]")
+    if(command == 'n'):
+      continue
+    else:
+      running = False
+      break
+
 if __name__ == '__main__':
   x = sqrt(2)
   y = sqrt(2)
   z = 2
-  input_mode()
-  # rpy = get_camera_rpy(x, y, z)
+  # input_mode()
+
+  rpy = get_camera_rpy(x, y, z)
   # print(rpy)
-  # print(degrees(rpy[0]), degrees(rpy[1]), degrees(rpy[2]))
+  print((rpy[0]), (rpy[1]), (rpy[2]))
+  alt_input()
   # print(90 - atan2(z, sqrt(x**2 + y**2)) * PI / 180)
 
